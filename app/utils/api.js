@@ -6,6 +6,7 @@ const params = `?client_id=${env.id}&client_secret=${env.sec}`;
 const getProfile = username =>{
   return axios.get(`https://api.github.com/users/${username}${params}`)
     .then(user=>{
+      console.log(user)
       return user.data
     })
 }

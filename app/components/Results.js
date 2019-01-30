@@ -4,6 +4,7 @@ const api = require('../utils/api')
 class Results extends React.Component {
   componentDidMount() {
     let players = queryString.parse(this.props.location.search)
+    console.log(players)
     api.battle([
       players.playerOneName,
       players.playerTwoName
